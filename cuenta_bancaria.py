@@ -12,13 +12,14 @@ class CuentaBancaria:
         # TODO: validar que monto > 0 y sumarlo al saldo
         if monto > 0:
             self._saldo += monto  
+        else:
+            raise ValueError("Monto inválido")
 
     def extraer(self, monto):
         # TODO: validar que monto > 0 y que haya saldo suficiente, y restarlo
-        if monto > 0 and monto <= self._saldo:
-            self._saldo -= monto
-        else:
+        if monto <= 0 or monto > self._saldo:
             raise ValueError("Monto inválido o saldo insuficiente.")
+        self._saldo -= monto
 
     def __str__(self):
         # TODO: devolver un texto descriptivo de la cuenta

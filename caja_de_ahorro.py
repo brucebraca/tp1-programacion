@@ -1,4 +1,4 @@
-from CuentaBancaria import CuentaBancaria
+from cuenta_bancaria import CuentaBancaria
 
 class CajaDeAhorro(CuentaBancaria):
     def __init__(self, titular, numero, saldo_inicial=0, tasa_interes=0.05):

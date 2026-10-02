@@ -1,4 +1,4 @@
-from CuentaBancaria import CuentaBancaria
+from cuenta_bancaria import CuentaBancaria
 
 class CuentaCorriente(CuentaBancaria):
     def __init__(self, titular, numero, saldo_inicial=0, limite_descubierto=2000):
